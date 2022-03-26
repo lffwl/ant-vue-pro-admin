@@ -10,19 +10,19 @@
         <span slot="action" slot-scope="text, record">
           <template>
             <a @click="handleEdit(record)" v-action:powerAdminListUpdate>编辑</a>
-            <a-divider type="vertical" v-if="$auth('powerAdminList.powerAdminListUpdate')"/>
+            <a-divider type="vertical" v-if="$auth('powerAdminList.powerAdminListUpdate')" />
             <a-popconfirm title="确定要删除该行？" @confirm="handleDel(record)" v-action:powerAdminListDelete>
-              <a-icon slot="icon" type="question-circle-o"/>
+              <a-icon slot="icon" type="question-circle-o" />
               <a>删除</a>
             </a-popconfirm>
-            <a-divider type="vertical" v-if="$auth('powerAdminList.powerAdminListSetRole')"/>
+            <a-divider type="vertical" v-if="$auth('powerAdminList.powerAdminListSetRole')" />
             <a @click="setRole(record)" v-action:powerAdminListSetRole>角色设置</a>
           </template>
         </span>
       </a-table>
     </a-skeleton>
     <create-form ref="createModal" :visible="visible" :loading="confirmLoading" :model="mdl" @cancel="handleCancel"
-                 @ok="handleOk"/>
+                 @ok="handleOk" />
   </div>
 </template>
 <script>
@@ -79,7 +79,7 @@ const columns = [
 ]
 
 export default {
-  name: 'powerAdminList',
+  name: 'PowerAdminList',
   components: {
     CreateForm
   },

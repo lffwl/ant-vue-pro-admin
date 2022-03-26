@@ -11,7 +11,7 @@
         </div>
       </div>
 
-      <router-view/>
+      <router-view />
 
       <!--<div class="footer">
         <div class="links">
@@ -28,15 +28,15 @@
 </template>
 
 <script>
-import {deviceMixin} from '@/store/device-mixin'
+import { deviceMixin } from '@/store/device-mixin'
 
 export default {
   name: 'UserLayout',
   mixins: [deviceMixin],
-  mounted() {
+  mounted () {
     document.body.classList.add('userLayout')
   },
-  beforeDestroy() {
+  beforeDestroy () {
     document.body.classList.remove('userLayout')
   }
 }

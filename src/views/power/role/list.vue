@@ -10,19 +10,19 @@
         <span slot="action" slot-scope="text, record">
           <template v-if="record.id !== 1">
             <a @click="handleEdit(record)" v-action:powerRoleListUpdate>编辑</a>
-            <a-divider type="vertical" v-if="$auth('powerRoleList.powerRoleListUpdate')"/>
+            <a-divider type="vertical" v-if="$auth('powerRoleList.powerRoleListUpdate')" />
             <a-popconfirm title="确定要删除该行？" @confirm="handleDel(record)" v-action:powerRoleListDelete>
-              <a-icon slot="icon" type="question-circle-o"/>
+              <a-icon slot="icon" type="question-circle-o" />
               <a>删除</a>
             </a-popconfirm>
-            <a-divider type="vertical" v-if="$auth('powerRoleList.powerRoleListSetPower')"/>
+            <a-divider type="vertical" v-if="$auth('powerRoleList.powerRoleListSetPower')" />
             <a @click="setPower(record)" v-action:powerRoleListSetPower>权限设置</a>
           </template>
         </span>
       </a-table>
     </a-skeleton>
     <create-form ref="createModal" :visible="visible" :loading="confirmLoading" :model="mdl" @cancel="handleCancel"
-                 @ok="handleOk"/>
+                 @ok="handleOk" />
   </div>
 </template>
 <script>
@@ -65,7 +65,7 @@ const columns = [
 ]
 
 export default {
-  name: 'powerRoleList',
+  name: 'PowerRoleList',
   components: {
     CreateForm, SetRolePower
   },

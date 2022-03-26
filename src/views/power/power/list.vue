@@ -10,9 +10,9 @@
         <span slot="action" slot-scope="text, record">
           <template>
             <a @click="handleEdit(record)" v-action:powerPowerListUpdate>编辑</a>
-            <a-divider type="vertical" v-if="$auth('powerPowerList.powerPowerListUpdate')"/>
+            <a-divider type="vertical" v-if="$auth('powerPowerList.powerPowerListUpdate')" />
             <a-popconfirm title="确定要删除该行？" @confirm="handleDel(record)" v-action:powerPowerListDelete>
-              <a-icon slot="icon" type="question-circle-o"/>
+              <a-icon slot="icon" type="question-circle-o" />
               <a>删除</a>
             </a-popconfirm>
           </template>
@@ -20,7 +20,7 @@
       </a-table>
     </a-skeleton>
     <create-form ref="createModal" :visible="visible" :loading="confirmLoading" :model="mdl" @cancel="handleCancel"
-                 @ok="handleOk"/>
+                 @ok="handleOk" />
   </div>
 </template>
 <script>
@@ -58,7 +58,7 @@ const columns = [
 ]
 
 export default {
-  name: 'powerPowerList',
+  name: 'PowerPowerList',
   components: {
     CreateForm
   },

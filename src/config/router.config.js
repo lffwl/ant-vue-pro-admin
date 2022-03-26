@@ -42,14 +42,14 @@ export const asyncRouterMap = [
         children: [
           {
             path: '/power/power',
-            name: 'powerPower',
+            name: 'PowerPower',
             component: RouteView,
             meta: { title: '权限设置', icon: 'safety', keepAlive: true, permission: ['powerPower'] },
             redirect: '/power/power/list',
             children: [
               {
                 path: '/power/power/list',
-                name: 'powerPowerList',
+                name: 'PowerPowerList',
                 component: () => import('@/views/power/power/list'),
                 meta: { title: '权限列表', keepAlive: true, permission: ['powerPowerList'] }
               }
@@ -64,7 +64,7 @@ export const asyncRouterMap = [
             children: [
               {
                 path: '/power/admin/list',
-                name: 'powerAdminList',
+                name: 'PowerAdminList',
                 component: () => import('@/views/power/admin/list'),
                 meta: { title: '管理员列表', keepAlive: true, permission: ['powerAdminList'] }
               }
@@ -79,7 +79,7 @@ export const asyncRouterMap = [
             children: [
               {
                 path: '/power/role/list',
-                name: 'powerRoleList',
+                name: 'PowerRoleList',
                 component: () => import('@/views/power/role/list'),
                 meta: { title: '角色列表', keepAlive: true, permission: ['powerRoleList'] }
               }
